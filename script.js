@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const cityName = city.value.trim();
       if (!cityName) return;
-      const API_KEY = `7badc0e69be4d8493ce07374fb4fb427`;
+      const API_KEY = CONFIG.API_KEY
       const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`;
       const response = await fetch(api_url);
       const data = await response.json();
